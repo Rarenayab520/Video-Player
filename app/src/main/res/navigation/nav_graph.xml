@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashfragment">
+    <fragment
+        android:id="@+id/splashfragment"
+        android:name="com.nayab.bottomnavigation.SplashFragment"
+        android:label="Splash"/>
+    <fragment
+        android:id="@+id/signinfragment"
+        android:name="com.nayab.bottomnavigation.SignInFragment"
+        android:label="SignIn"/>
+    <fragment
+        android:id="@+id/signupfragment"
+        android:name="com.nayab.bottomnavigation.SignUpFragment"
+        android:label="SignUp"/>
+    <fragment
+        android:id="@+id/homefragment"
+        android:name="com.nayab.bottomnavigation.HomeFragment"
+        android:label="Home"/>
+
+</navigation>

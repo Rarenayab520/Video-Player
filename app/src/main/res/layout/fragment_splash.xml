@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient"
+    tools:context=".SplashFragment">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:src="@drawable/ai_trust"/>
+    <TextView
+        android:id="@+id/tvaitrust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="AI Trust"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="44dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The better ways for move forward."
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:textSize="16sp"/>
+    <ImageView
+        android:id="@+id/btnToLogin"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_arrow"
+        android:clickable="true"/>
+
+</LinearLayout>
