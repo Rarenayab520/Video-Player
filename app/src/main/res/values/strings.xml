@@ -1,5 +1,13 @@
 <resources>
-    <string name="app_name">BottomNavigation</string>
+    <string name="app_name">Video Explorer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="explore_content">Explore Content</string>
+    <string name="nav_open">Open Navigation Drawer</string>
+    <string name="nav_close">Close Navigation Drawer</string>
+    <string name="app_logo">App Logo</string>
+    <string name="video_explorer">Video Explorer</string>
+    <string name="the_better_way_to_move_forward">The better way to move forward.</string>
+    <string name="arrow">Arrow</string>
+
 </resources>

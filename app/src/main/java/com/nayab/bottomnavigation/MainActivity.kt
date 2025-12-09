@@ -1,46 +1,72 @@
 package com.nayab.bottomnavigation
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
-import com.nayab.bottomnavigation.databinding.ActivityMainBinding
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var appBarConfiguration: AppBarConfiguration
+
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navView: NavigationView
+    private lateinit var toolbar: androidx.appcompat.widget.Toolbar
+    private lateinit var tabLayout: TabLayout
+    private lateinit var viewPager: ViewPager2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        // Set toolbar
-        setSupportActionBar(binding.toolbar)
+        // ------------------ FIND VIEWS ------------------
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navView = findViewById(R.id.navigation_view)
+        toolbar = findViewById(R.id.toolbar)
+        tabLayout = findViewById(R.id.tabLayout)
+        viewPager = findViewById(R.id.viewPager)
 
-        val navHostFragment=supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController=navHostFragment.navController
-        val bottomNavigation=binding.bottomNavigationView
+        // ------------------ TOOLBAR ------------------
+        setSupportActionBar(toolbar)
 
-        NavigationUI.setupWithNavController(bottomNavigation,navController)
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.homefragment,
-                R.id.signinfragment,
-                R.id.signupfragment
-            ),
-            binding.drawerLayout// DrawerLayout ID
+        val toggle = ActionBarDrawerToggle(
+            this,
+            drawerLayout,
+            toolbar,
+            R.string.nav_open,
+            R.string.nav_close
         )
 
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
-        NavigationUI.setupWithNavController(binding.navigationView, navController)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
-    }
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = binding.navHostFragment.getFragment<NavHostFragment>().navController
-        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp()
+        // ------------------ TAB + VIEWPAGER SETUP ------------------
+        viewPager.adapter = TabsAdapter(this)
+
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = when (position) {
+                0 -> "Home"
+                1 -> "Explore"
+                2 -> "About"
+                3 -> "Profile"
+                else -> "Tab"
+            }
+        }.attach()
+
+        // ------------------ DRAWER NAV CLICKS ------------------
+        navView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> viewPager.currentItem = 0
+                R.id.nav_explore -> viewPager.currentItem = 1
+                R.id.nav_about -> viewPager.currentItem = 2
+                R.id.nav_profile -> viewPager.currentItem = 3
+                R.id.nav_logout -> finish()
+            }
+
+            drawerLayout.closeDrawers()
+            true
+        }
     }
 }
