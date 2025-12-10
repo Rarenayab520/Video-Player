@@ -1,19 +1,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/thumbnail"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        app:shapeAppearanceOverlay="@style/RoundedImageShape"
         android:scaleType="centerCrop" />
+
 
     <TextView
         android:id="@+id/videoTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textSize="16sp" />
 </LinearLayout>

@@ -8,5 +8,10 @@
 
     </style>
 
+    <style name="RoundedImageShape">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+
     <style name="Theme.BottomNavigation" parent="Base.Theme.BottomNavigation" />
 </resources>
