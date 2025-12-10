@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.MediaController
 import android.widget.TextView
 import android.widget.VideoView
@@ -13,7 +14,11 @@ import com.nayab.bottomnavigation.databinding.FragmentVideoPlayerBinding
 
 class VideoPlayerFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_video_player, container, false)
     }
 
@@ -28,7 +33,15 @@ class VideoPlayerFragment : Fragment() {
         videoView.setVideoURI(uri)
 
         videoView.setOnPreparedListener { it.start() }
+        val backBtn = view.findViewById<ImageView>(R.id.btnClose)
+
+        backBtn.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
+            requireActivity().findViewById<View>(R.id.video_player_container).visibility = View.GONE
+        }
+
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

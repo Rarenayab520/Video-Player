@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="20dp"
-            android:text="Explore Content"
+            android:text="@string/explore"
             android:textColor="@android:color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="🔥 Trending Now"
+                    android:text="@string/trending_now"
                     android:textColor="@android:color/white"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="12dp"
-            android:text="Categories"
+            android:text="@string/categories"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -92,7 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Music"
+                    android:text="@string/music"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
             </com.google.android.material.card.MaterialCardView>
@@ -140,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="12dp"
-            android:text="Recommended for You"
+            android:text="@string/recommended_for_you"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -174,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="📺 Top Pick For You"
+                    android:text="@string/top_pick_for_you"
                     android:textColor="@android:color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />

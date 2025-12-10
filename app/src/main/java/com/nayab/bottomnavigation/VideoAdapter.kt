@@ -3,6 +3,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import com.nayab.bottomnavigation.databinding.ItemVideoBinding
+
 class VideoAdapter(
     private val videos: List<VideoModel>,
     private val onClick: (VideoModel) -> Unit

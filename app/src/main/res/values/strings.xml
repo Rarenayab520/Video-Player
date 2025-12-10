@@ -9,5 +9,26 @@
     <string name="video_explorer">Video Explorer</string>
     <string name="the_better_way_to_move_forward">The better way to move forward.</string>
     <string name="arrow">Arrow</string>
+    <string name="explore">Explore Content</string>
+    <string name="trending_now">🔥 Trending Now</string>
+    <string name="categories">Categories</string>
+    <string name="music">Music</string>
+    <string name="recommended_for_you">Recommended for You</string>
+    <string name="top_pick_for_you">📺 Top Pick For You</string>
+    <string name="videos">Videos</string>
+    <string name="video_explorer1">Video Explorer</string>
+    <string name="nayab_asmat">Nayab Asmat</string>
+    <string name="made_with_for_task">Made with ❤️ for Task</string>
+    <string name="manage_profile_and_account_settings">Manage profile and account settings</string>
+    <string name="browse_categories_and_trending_content">Browse categories and trending content</string>
+    <string name="watch_and_explore_online_videos">Watch and explore online videos</string>
+    <string name="features">Features</string>
+    <string name="this_application_is_designed_to_demonstrate_clean_architecture_modern_ui_and_multimedia_features_it_includes_video_browsing_an_explore_section_a_profile_screen_and_a_navigation_drawer_with_tab_layout">This application is designed to demonstrate clean architecture, modern UI, and multimedia features. It includes video browsing, an explore section, a profile screen, and a navigation drawer with tab layout.</string>
+    <string name="version_1_0_0">Version 1.0.0</string>
+    <string name="video_explorer_app">Video Explorer App</string>
+    <string name="nayab_example_com">nayab@example.com</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
 
 </resources>

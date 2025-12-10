@@ -5,8 +5,8 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:background="@drawable/bg_gradient"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <!-- ==================== MAIN CONTENT ==================== -->
@@ -22,7 +22,7 @@
             android:background="@color/grey_card"
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:title="Video Explorer"
+            app:title="@string/video_explorer1"
             app:titleTextColor="@android:color/white" />
 
         <com.google.android.material.tabs.TabLayout
@@ -31,8 +31,8 @@
             android:layout_height="wrap_content"
             android:background="@color/grey_card"
             app:tabIndicatorColor="@android:color/white"
-            app:tabTextColor="@android:color/darker_gray"
-            app:tabSelectedTextColor="@android:color/white" />
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/darker_gray" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"
@@ -44,8 +44,8 @@
             android:id="@+id/video_player_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
-            android:background="#CC000000"/>
+            android:background="#CC000000"
+            android:visibility="gone" />
 
     </LinearLayout>
 

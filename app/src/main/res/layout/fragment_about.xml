@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_gradient"
     android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <!-- App Icon -->
         <ImageView
             android:id="@+id/appIcon"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/img_2"
             android:layout_marginTop="40dp"
-            android:clipToOutline="true" />
+            android:clipToOutline="true"
+            android:src="@drawable/img_2" />
 
         <!-- App Title -->
         <TextView
             android:id="@+id/aboutTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Video Explorer App"
-            android:textSize="26sp"
-            android:textStyle="bold"
+            android:paddingTop="20dp"
+            android:text="@string/video_explorer_app"
             android:textColor="@android:color/white"
-            android:paddingTop="20dp" />
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
         <!-- Version -->
         <TextView
             android:id="@+id/appVersion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Version 1.0.0"
+            android:paddingTop="4dp"
+            android:text="@string/version_1_0_0"
             android:textColor="#DDFFFFFF"
-            android:textSize="14sp"
-            android:paddingTop="4dp" />
+            android:textSize="14sp" />
 
         <!-- About Card -->
         <com.google.android.material.card.MaterialCardView
@@ -48,23 +48,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:backgroundTint="#22FFFFFF"
-            app:cardCornerRadius="18dp"
-            android:padding="20dp">
+            android:padding="20dp"
+            app:cardCornerRadius="18dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <TextView
                     android:id="@+id/aboutDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="This application is designed to demonstrate clean architecture, modern UI, and multimedia features. It includes video browsing, an explore section, a profile screen, and a navigation drawer with tab layout."
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/this_application_is_designed_to_demonstrate_clean_architecture_modern_ui_and_multimedia_features_it_includes_video_browsing_an_explore_section_a_profile_screen_and_a_navigation_drawer_with_tab_layout"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:lineSpacingExtra="4dp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
@@ -74,11 +74,11 @@
             android:id="@+id/featuresTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Features"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:paddingTop="30dp"
+            android:text="@string/features"
             android:textColor="@android:color/white"
-            android:paddingTop="30dp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <!-- Features List -->
         <LinearLayout
@@ -103,9 +103,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Watch and explore online videos"
-                    android:textColor="#DDFFFFFF"
                     android:paddingStart="12dp"
+                    android:text="@string/watch_and_explore_online_videos"
+                    android:textColor="#DDFFFFFF"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -125,9 +125,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Browse categories and trending content"
-                    android:textColor="#DDFFFFFF"
                     android:paddingStart="12dp"
+                    android:text="@string/browse_categories_and_trending_content"
+                    android:textColor="#DDFFFFFF"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -147,9 +147,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Manage profile and account settings"
-                    android:textColor="#DDFFFFFF"
                     android:paddingStart="12dp"
+                    android:text="@string/manage_profile_and_account_settings"
+                    android:textColor="#DDFFFFFF"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -159,10 +159,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Made with ❤️ for Task"
-            android:textColor="#AAFFFFFF"
             android:paddingTop="40dp"
             android:paddingBottom="20dp"
+            android:text="@string/made_with_for_task"
+            android:textColor="#AAFFFFFF"
             android:textSize="14sp" />
 
     </LinearLayout>
